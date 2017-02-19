@@ -61,6 +61,7 @@ class GraphStageTest extends WordSpec with Matchers {
       sub.request(1)
       subscriber.expectNext(_msg)
 
+      sub.cancel()
     }
   }
 }
