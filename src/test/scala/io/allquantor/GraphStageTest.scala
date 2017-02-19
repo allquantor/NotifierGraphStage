@@ -32,7 +32,7 @@ class GraphStageTest extends WordSpec with Matchers {
 
       // Customized buffer.
       val bufferSize = 5
-      val graphStage = new MesosBufferGraphStage[ServerSentEvent](bufferSize, bufferOverflowMessage)
+      val graphStage = new NotifierGraphStage[ServerSentEvent](bufferSize, bufferOverflowMessage)
 
       // Test event flow.
       val eventFlow = Source.fromPublisher(publisher).

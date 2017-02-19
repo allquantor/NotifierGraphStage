@@ -7,7 +7,7 @@ import akka.stream.stage._
 import scala.collection.mutable
 
 
-final case class MesosBufferGraphStage[T](size: Int, bufferOverflowMessage: T) extends GraphStage[FlowShape[T, T]] {
+final case class NotifierGraphStage[T](size: Int, bufferOverflowMessage: T) extends GraphStage[FlowShape[T, T]] {
 
   val in = Inlet[T](Logging.simpleName(this) + ".in")
   val out = Outlet[T](Logging.simpleName(this) + ".out")
